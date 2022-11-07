@@ -1,10 +1,9 @@
 <!-- readme.md -->
+# XXX_アカデミー
 
-# test
-retry
+![png](https://git@github.com:akaitori444/00_Cheese_Academy.git/img/scsh.png)
 
-## chapter01
+## Overview
+G's課題_00「チーズアカデミー」改造
 
-## chapter02
-
-## chapter03
+[twitter](https://twitter.com/bokuwahinotori)
