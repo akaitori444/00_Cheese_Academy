@@ -2,7 +2,7 @@
 
 getdice6 = new Array(
     "00_Cheese_Academy/img/6d1.gif", 
-    "../img/6d2.gif",
+    "img/6d2.gif",
     "../img/6d3.gif",
     "../img/6d4.gif",
     "../img/6d5.gif",
