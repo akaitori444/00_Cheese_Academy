@@ -1,7 +1,7 @@
 // JavaScript Document
 
 getdice6 = new Array(
-    "../img/6d1.gif", 
+    "00_Cheese_Academy/img/6d1.gif", 
     "../img/6d2.gif",
     "../img/6d3.gif",
     "../img/6d4.gif",
