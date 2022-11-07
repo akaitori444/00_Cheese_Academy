@@ -1,0 +1,590 @@
+
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body{
+	font-family: "Roboto", "Yu Gothic Medium", "游ゴシック Medium", "YuGothic", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px; /*   */
+	text-align: center;
+}
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+
+
+
+/*どの部分のcssに対して命令をしているのかコメントを記載しよう！
+---------------------*/
+
+/*----------------- 共有 -----------------*/
+.text_center{
+	text-align: center;
+}
+.head__title{
+	font-size: 24px;
+	color: #ffb61a ;
+	margin-top: 120px;}
+	
+.text_white{
+	color: #ffffff ;
+}
+
+.Hyde{
+	display:none;
+}
+/*----------------- btn -----------------*/
+.animation_right{
+	color: #000000 ;
+	animation-name: Anime_right;/*1で解説*/
+	animation-fill-mode:forwards;/*2で解説*/
+	animation-duration:5s;/*3で解説*/
+	animation-timing-function:ease;/*5で解説*/
+	animation-delay: 2s;/*6で解説*/
+	animation-direction:normal;/*7で解説*/
+}
+@keyframes Anime_right {
+	0% {
+		transform: translateX(180px);
+		opacity: 0;
+	  }
+	  100% {
+		transform: translateX(0);
+	  }
+	  40%,100% {
+		opacity: 1;
+	  }		
+}
+
+.animation_left{
+	color: #000000 ;
+	animation-name: Anime_left;/*1で解説*/
+	animation-fill-mode:forwards;/*2で解説*/
+	animation-duration:5s;/*3で解説*/
+	animation-timing-function:ease;/*5で解説*/
+	animation-delay: 2s;/*6で解説*/
+	animation-direction:normal;/*7で解説*/
+}
+@keyframes Anime_left {
+	0% {
+		transform: translateX(-180px);
+		opacity: 0;
+	  }
+	  100% {
+		transform: translateX(0);
+	  }
+	  40%,100% {
+		opacity: 1;
+	  }		
+}
+
+/*---スライダーのためのcss---*/
+.slider img {
+    width:100%;/*スライダー内の画像を横幅100%に*/
+    height:auto;
+}
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+.slider .slick-slide {
+    margin:0 5px;/*スライド左右の余白調整*/
+}
+/*========= レイアウトのためのCSS ===============*/
+ul{margin:0;padding: 0;list-style: none;}
+
+a{color: #333;}
+
+a:hover,
+a:active{
+  text-decoration: none;
+}
+
+.scroll_size{
+	height: auto;
+	width: auto;
+}
+/*----------------- btn -----------------*/
+.dicegame{
+	background: url("../img/070.gif");				   /* 画像のURLを指定       */
+    background-repeat:  no-repeat;                         /* 画像の繰り返しを指定  */              
+    background-position:center center;                     /* 画像の表示位置を指定  */
+	background-size:cover;                                 /* 画像のサイズを指定  */
+	width:100%;                                            /* 横幅のサイズを指定    */
+    height:100%;                                          /* 縦幅のサイズを指定    */
+	color: #ffffff;
+}
+
+
+.exampleClass {
+    padding: 12px 24px;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+    animation: pulse 1.75s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+    }
+}
+
+.btn,
+a.btn,
+button.btn {
+	font-size: 1.6rem;
+	font-weight: 700;
+	line-height: 1.5;
+	position: relative;
+	display: inline-block;
+	padding: 1rem 4rem;
+	cursor: pointer;
+	user-select: none;
+	transition: all 0.3s;
+	text-align: center;
+	border-radius: 0.5rem;
+}
+
+#overlay{
+	position: fixed;
+	top:0;
+	z-index: 10;
+	width: 100vw;
+	height: 100vh;
+	visibility: hidden;
+	opacity: 0;
+	background: rgba(0,0,0,0.6);
+	transition: all 0.5s ease-out;
+}
+#overlay.overlay-on{
+	visibility: visible;
+	opacity: 1;
+}
+
+.flex{
+	width: 100%;
+	height:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+#overlay-inner{
+	padding:10px 60px;
+	background-color:#FFF;
+	text-align:center;
+}
+
+#open-btn, #close-btn{
+	display:block;
+	margin:20px auto;
+	padding:10px 30px;
+	background-color:#eee;
+	border:solid #ccc 1px;
+	cursor: pointer;
+}
+/*----------------- header -----------------*/
+.header{
+	background: url("../img/mainbg.png");				   /* 画像のURLを指定       */
+    background-repeat:  no-repeat;                         /* 画像の繰り返しを指定  */              
+    background-position:center center;                     /* 画像の表示位置を指定  */
+	background-size:cover;                                 /* 画像のサイズを指定  */
+	width:100%;                                            /* 横幅のサイズを指定    */
+    height:100%;                                          /* 縦幅のサイズを指定    */
+	color: #ffffff;
+}
+
+.header__title{font-size: 48px;}
+.space_40{height: 40px;}
+.header__name{font-size: 36px;}
+.header_space{height: 200px;}
+.header_1{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+/*----------------- menu -----------------*/
+.menu{
+	justify-content: space-evenly;
+	width: 100%;
+	border: 0.2px solid;
+	height: 100px;
+	width: 100%; /* 幅いっぱいを指定 */
+    background: #efefef; /* 背景色にグレーを指定 */
+    padding: 20px 50px; /* ヘッダーに上下左右それぞれ余白を指定 */
+    box-sizing: border-box; /* padding分を含んで幅を100%にするため */
+    position: fixed; /* ウィンドウを基準に画面に固定 */
+    top: 0; /* 上下の固定位置を上から0pxにする */
+    left: 0; /* 左右の固定位置を左から0pxにする */
+    display: flex; /* 中の要素を横並びにする */
+    align-items: center; /* 中の要素を上下中央に並べる */
+}
+.menu_img{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	height: 100%;
+}
+.menu_sab{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #222222;
+	font-size: 21px;
+}
+img.example1 {
+    width: 300px;
+    height: 60px;
+}
+
+
+/*----------------- ★About -----------------*/
+.about1{
+	display: block;
+	margin: auto;
+	padding: 21px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	}
+.about_a0{margin-top: 24px;}
+.about_a1{margin-top: 64px;}
+.about_a2{margin-top: 40px;}
+.about_a4{margin-top: 40px;}
+.about_a5{margin-top: 40px;}
+.about_a7{margin-top: 80px;}
+.about__background{
+	background-image: url(../img/AS_bg.jpg);
+	background-size:auto;
+	background-position: center;
+}
+.about__line{
+	color: #000000 ;
+	animation-name: fadeInAnime;/*1で解説*/
+	animation-fill-mode:forwards;/*2で解説*/
+	animation-duration:3s;/*3で解説*/
+	animation-timing-function:ease;/*5で解説*/
+	animation-delay: 0.5s;/*6で解説*/
+	animation-direction:normal;/*7で解説*/
+}
+
+/*1で解説*/
+@keyframes fadeInAnime{
+0% {
+    opacity: 0;
+}
+
+100% {
+    opacity: 1;
+}
+
+}
+/*----------------- Course -----------------*/
+.course_bace{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.course_00{padding: 64px;}
+.course_01{font-size: 24px;color: #ffffff;}
+.course_02{margin-top: 24px;}
+.course_04{padding: 64px;}
+/*----------------- guide -----------------*/
+.guide_main{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	text-align: left;
+	background-image: url(../img/AS_bg.jpg);
+	background-size:auto;
+	background-position: center;
+}
+.guide_layout{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-grow: 1;
+}
+.guide_layout2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.guide_text{width: 400px;}
+.guide_title{
+	font-size: 24px;
+	color: #222222; 
+}
+.guide_img{width: 50%;margin: 0 -6.5% 0;}
+.guide_space{padding: 40px;}
+.guide_space2{padding: 32px;}
+
+/*----------------- news -----------------*/
+.news_bg{
+	background: url("../img/070.gif");				   /* 画像のURLを指定       */
+    background-repeat:  no-repeat;                         /* 画像の繰り返しを指定  */              
+    background-position:center center;                     /* 画像の表示位置を指定  */
+	background-size:cover;                                 /* 画像のサイズを指定  */
+	width:100%;                                            /* 横幅のサイズを指定    */
+    height:100%;                                          /* 縦幅のサイズを指定    */
+}
+.news__main{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: #ffffff; 
+	font-size: 24px;
+}
+.news__main1{margin-top:64px;}
+.news__main2{margin-top:64px;}
+.news_list{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	color: #ffffff; 
+}
+.nezs_tab1{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.news1_img{width: 280px;}
+.new1_title{text-align: left;margin-top: 32px;}
+.new1_text{text-align: left;margin-top: 24px;width: 280px;}
+.mire__main{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.more{
+	font-size: 21px;
+	color: #efefef;
+	background-color: #ffb61a;
+}
+.more__space1{margin-top: 56px;}
+.more__space2{margin-bottom: 48px;}
+/* 005 */
+.button005 a {
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 30px 120px;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #ffb61a;
+    background: linear-gradient(270deg, #ffb61a 0%, #ffb61a 100%);
+}
+.button005 a:hover {
+    background: #ffb61a;
+    background: linear-gradient(270deg, rgb(190, 235, 27) 0%, rgb(179, 252, 62) 100%);
+}
+
+/*----------------- ★access -----------------*/
+.access{
+	background-color: #fafafa;
+}
+.access_h{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;}
+.access_h2{
+	margin-top: 64px;
+	font-size: 24px;
+	color: #222222;
+}
+.access_h3{margin-top: 24px;}
+.access_h4{margin-top: 64px;}
+
+/* Google Mapを囲う要素 */
+.map {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-top: 56.25%;  /* 比率を16:9に固定 */
+}
+/* Google Mapのiframe */
+.map iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.map-wrap {
+	max-width: 100%;/* ここに横幅を指定 */
+}
+.map-resize{
+	width: 300px;
+	height: 200px;
+}
+
+
+.paragraph-start{text-align:center;padding:60px 0 0 0;}
+h2{font-size:24px;padding:0 0 30px 0;}
+h3{font-size:18px;padding:0 0 60px 0;}
+.access1{margin-top:60px;background-color:#fafafa;padding-bottom:30px;}
+.access-table{padding-top:45px;padding-left:30%;}
+.access-dt{float:left;padding:10px;}
+.access-dd{margin-left:150px;padding:10px;text-align: left;}
+@media (max-width:670px){
+.paragraph-start h2{margin-top:30px;}
+.paragraph-start{width:90%;padding:0% 5% 5% 5%;}
+.access-table{display:none;}
+}
+/*----------------- Contact -----------------*/
+.contact-table{padding-top:45px;padding-left:30%;}
+.contact-dt{float:left;padding:10px;}
+.contact-dd{margin-left:150px;padding:10px;text-align: left;}
+.contact-type{border: 0.2px solid;}
+
+.contact__space{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-image: url(../img/AS_bg.jpg);
+	background-size:auto;
+	background-position: center;
+}
+.contact__text{
+	margin-top:64px;
+	font-size: 24px;
+	font-weight: bold;
+}
+.form_wrapper{
+	width: 200px;
+	margin: auto;
+}
+.form_inner{
+	display: flex;
+	flex-wrap: wrap;
+}
+.form_title{
+	width: 50px;
+	font-weight: bold;
+}
+.form_item{
+	width: 100px;
+	border: solid 1px;
+}
+
+.a__row{
+	display: flex;
+	flex-direction: column;
+	margin: 0 0 0 -160px;
+}
+
+.a__left{
+	margin-left:150px;padding:10px;text-align: left;
+}
+
+dl{
+	margin: 0 0 0 10%;
+}
+/*----------------- sns -----------------*/
+.movie1__all{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url("../img/070.gif");				   /* 画像のURLを指定       */
+    background-repeat:  no-repeat;                         /* 画像の繰り返しを指定  */              
+    background-position:center center;                     /* 画像の表示位置を指定  */
+	background-size:cover;                                 /* 画像のサイズを指定  */
+	width:100%;                                            /* 横幅のサイズを指定    */
+    height:100%;                                          /* 縦幅のサイズを指定    */
+	padding: 10px;
+}
+.SNS__all{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.twitter-timeline{
+	width: 300px;
+	height: 300px;
+}
+
+/*----------------- ★footer -----------------*/
+.footer{
+	padding: 32px 0;
+	background-color: #707070;
+	width: 100%;
+}
+.footer .wrapper{
+	position: relative;
+}
+.btn-pagetop{
+	position: absolute;
+	top: -100px;
+	right: 0;
+	display: block;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #707070;
+}
+.icon-up{
+	display: block;
+	padding: 10px 0;
+	color: #ffffff;
+	font-size: 2.4rem;
+}
+.copyrights{
+	font-size: 18px;
+	color: #ffffff;
+}
+
+/*----------------- ★footer -----------------*/
+
+.hino1{
+	position: fixed; /* ウィンドウを基準に画面に固定 */
+    top: 42rem; /* 上下の固定位置を上から0pxにする */
+    left: 90rem; /* 左右の固定位置を左から0pxにする */
+	animation-name: Anime_hino;/*1で解説*/
+	animation-duration:5s;
+	animation-fill-mode:backwards;/*2で解説*/
+	animation-iteration-count:infinite;/*4で解説*/
+	animation-timing-function:ease;/*5で解説*/
+	animation-direction:normal;/*7で解説*/
+}
+@keyframes Anime_hino {
+	0% {
+		transform: translateX(180px);
+		opacity: 0;
+	  }
+	  100% {
+		transform: translateX(0);
+	  }
+	  40%,100% {
+		opacity: 1;
+	  }		
+}
