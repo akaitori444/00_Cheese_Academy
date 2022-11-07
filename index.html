@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>███アカデミー</title>
+    <meta name="description" content=“世界を変える███を作ろう。███アカデミーは、███職人を養成するための学校です。”>
+
+    <meta property="og:title" content="███アカデミー">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="#" />
+    <meta property="og:site_name" content="███アカデミー" />
+    <meta property="og:description" content="世界を変える███を作ろう。███アカデミーは、███職人を養成するための学校です。" />
+
+    <meta name="format-detection" content="telephone=no">
+    <!--ダイスjs読み込み用-->
+    <script src="js/dice.js" type="text/javascript"></script>
+    <!--AR導入用*不採用-->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    </script>
+    <!--スライダーのためのcss-->    
+    <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/css/6-1-8.css">
+    <!--リセットCSS-->
+    <link rel="canonical" href="#">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/sanitize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <!-- あらかじめcssを読み込んでいるので設定しなくてOK-->
+</head>
+
+<body>
+    <!-- ここから記述しよう -->
+        
+    <!-- header -->
+        <header class="header">
+        <dvi class="header_1">
+            <dvi class="header_space"></dvi>
+            <h1 class="header__title">セカイを変える███を作ろう</h1>
+            <div class="space_40"></div>
+            <p1 class="header__name">
+                ███職人養成学校「███アカデミーUNIT_YAMAGUCHI」
+            </p1>
+            <dvi class="header_space"></dvi>    
+        </dvi>
+    </header>
+    <!-- ダイスゲーム -->
+    <div>
+        <div class="dicegame">
+            <h4>あなたにとっての███とは？</h4>
+            <p>あなたの心を読み取り言葉にします。下のボタンを押してください。</p>
+            <p><input class="btn exampleClass" type="button" value="あなたは何を作る？" onclick="ring(); getDice2();"></p>
+            <p>
+                <span><img src="img/6d.gif" name="imgdice2" alt="imgdice2"></span>
+                <span><img src="img/6d.gif" name="imgdice3" alt="imgdice3"></span>
+                <span><img src="img/6d.gif" name="imgdice4" alt="imgdice4"></span>
+                <span class="Hyde" id="condice2"></span>
+            </p>
+        </div>
+        <audio class="Hyde" id="DiceSound" preload="auto" controls>
+            <source src="../img/dice.wav" type="audio/wav">
+            <source src="../img/dice.mp3" type="audio/mp3">
+        </audio>
+    </div>
+    <!-- ★About -->
+    <div class="about" id="About">
+        <div class="about1 about__background">
+            <h2 class="head__title about__line">ABOUT</h2>
+            <div class="about_a0 about__line">███アカデミーについて</div>
+            <div class="about_a1 about__line">███アカデミーは，███職人養成学校です．</div>
+            <div class="about_a2 about__line">███の素晴らしさを，██████を通じて，できるだけ多くの人に知っていただきたい．</div>
+            <div class="about_a3 about__line">そして，食卓にはいつも███があった，あの頃の当たり前をこの手で取り戻したい．</div>
+            <div class="about_a4 about__line">そんな思いから,███職人養成学校「███アカデミーFUKUOKA」は歩みを始めています．</div>
+            <div class="about_a5 about__line">卒業後，███自給自足のバックアップはもちろんのこと，</div>
+            <dvi class="about_a6 about__line">███職人への就職・転職もサポートします．</dvi>
+            <dvi class="about_a7 about__line"></dvi>    
+        </div>
+    </div>
+        <div class="scroll"> <!-- スクロール画像 -->
+            <body lang="ja">
+            <ul class="slider">
+            <li><img class="scroll_size" src="img/about_01.jpg" alt="s1"></li>
+            <li><img class="scroll_size" src="img/about_02.jpg" alt="s2"></li>
+            <li><img class="scroll_size" src="img/about_03.jpg" alt="s3"></li>
+            <li><img class="scroll_size" src="img/about_04.jpg" alt="s4"></li>
+            <li><img class="scroll_size" src="img/about_05.jpg" alt="s5"></li>
+            <li><img class="scroll_size" src="img/about_06.jpg" alt="s6"></li>
+            <!--/slider--></ul>
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+            <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/js/6-1-8.js"></script>
+            </body>
+        </div>
+        <dvi class="course_bace dicegame" id="Course">
+            <div class="course_00"></div>
+            <h3 class="course_01">Course</h3>
+            <div class="course_02">未経験からでもスタートができるよう，カリキュラムは多くの専門家や</div>
+            <div class="course_03">現役███職人のアドバイスのもと，作られました．</div>
+            <dvi class="course_04"></dvi>
+        </dvi>
+    <!-- guide -->
+    <div  class="guide_main">
+        <!-- 案内1 -->
+        <div class="guide_layout animation_right">
+            <img class="guide_img demo" src="img/course_01.jpg" alt="説明1">
+            <div class="guide_layout2">
+                <dvi>
+                    <div class="guide_title">本格的な農園を使った実地研修</div>
+                    <dvi class="guide_space"></dvi>
+                    <div class="guide_text">███アカデミーでは，本格的な農園を使った実地研修を行うことができます．プロとして活躍する███職人も使用するような，広大で環境も整った農園を余すところなく使い，卒業時には本格的な███を自分の力で作れる実践力の養成を目指します．</div>    
+                </dvi>
+            </div>
+        </div>
+        <!-- 案内2 -->
+        <div class="guide_layout animation_left">
+            <dvi class="guide_layout2">
+                <dvi>
+                    <div class="guide_title">必要な知識もしっかりと取得</div>
+                    <dvi class="guide_space"></dvi>
+                    <div class="guide_text">███作りには，しっかりとした食に関する知識が欠かせません．███アカデミーでは，一流講師陣による，███作りに必要ないろはを余すところなく学べます．███そのものでなく，栄養学全般を学ぶことも可能ですので，███以外への展開も夢ではないでしょう．</div>    
+                </dvi>
+            </dvi>
+            <img class="guide_img" src="img/course_02.jpg" alt="説明2">
+        </div>
+        <!-- 案内3 -->
+        <div class="guide_layout animation_right">
+            <img class="guide_img" src="img/course_03.jpg" alt="説明3">
+            <dvi class="guide_layout2">
+                <dvi>
+                    <div class="guide_title">卒業制作はティスティング審査あり</div>
+                    <dvi class="guide_space"></dvi>
+                    <div class="guide_text">███アカデミーでは最後の2ヶ月間で卒業制作を実施．卒業制作として，███作りを実際に行います．卒業後，一般参加によるティスティング審査があるため，作り手の目線だけでなく，消費者の目線から，卒業制作作品としての███を，しっかりと評価いただくことができます．</div>
+                </dvi>                
+            </dvi>
+        </div>
+    </div>
+
+    <!-- NEWS -->
+    <div class="news_bg" id="news">
+        <dvi class="news__main">
+            <h3 class="news__main1">NEWS</h3>
+            <p>ニュース</p>
+            <dvi class="news__main2"></dvi>    
+        </dvi>
+        <div class="news_list">
+            <dvi class="nezs_tab1">
+                <img class="news1_img" src="img/news_img.jpg" alt="ニュース">
+                <dvi>
+                    <p class="new1_title">2018/11/24</p>
+                    <P class="new1_text">███アカデミー卒業生のコスゲさんによる███だけをふんだんに使用した話題のピザ屋「Kosuge Pizza」が天神でオープンしました！</P>    
+                </dvi>
+            </dvi>
+            <dvi class="nezs_tab1">
+                <img class="news1_img" src="img/news_img.jpg" alt="ニュース">
+                <dvi>
+                    <p class="new1_title">2018/11/24</p>
+                    <P class="new1_text">███アカデミー卒業生のコスゲさんによる███だけをふんだんに使用した話題のピザ屋「Kosuge Pizza」が天神でオープンしました！</P>    
+                </dvi>
+            </dvi>
+            <dvi class="nezs_tab1">
+                <img class="news1_img" src="img/news_img.jpg" alt="ニュース">
+                <dvi>
+                    <p class="new1_title">2018/11/24</p>
+                    <P class="new1_text">███アカデミー卒業生のコスゲさんによる███だけをふんだんに使用した話題のピザ屋「Kosuge Pizza」が天神でオープンしました！</P>    
+                </dvi>
+            </dvi>    
+        </div>
+        <dvi class="mire__main">
+            <dvi class="more__space1"></dvi>
+            <button id="open-btn" class="overlay-event button005" type="button">More</button>
+            <div id="overlay" class="overlay-event">
+              <div class="flex">
+                <div id="overlay-inner">
+                  <p>特に中身のあるコンテンツはないよ</p>
+                  <img class="news1_img" src="img/手をふる.gif" alt="ヒノトリ">
+                  <button id="close-btn" class="overlay-event" type=button>Close</button>
+                </div>
+              </div>
+            </div>                    
+            <dvi class="more__space2"></dvi>
+        </dvi>
+    </div>
+    <!-- 連絡先 -->
+    <div class="access" id="Access">
+            <div class="access_h">
+                <dvi class="access_h1"></dvi>
+                <h4 class="access_h2">ACCESS</h4>
+                <div class="access_h3">会社情報</div>    
+                <dvi class="access_h4"></dvi>
+            </div>
+            <dvi class="map-resize">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.082012461273!2d131.39116206552094!3d34.09303942302578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35449b0555555555%3A0x2a6332f3d29e5767!2zS0RESSDntq3mlrDjg5vjg7zjg6s!5e0!3m2!1sja!2sjp!4v1666777978813!5m2!1sja!2sjp" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                
+            </dvi>
+            <div class="access-table">
+                <dl>
+                    <dt class="access-dt">学校名</dt>
+                    <dd class="access-dd">███アカデミー UNIT_YAMAGUCHI</dd>
+                    <dt class="access-dt">事務所所在地</dt>
+                    <dd class="access-dd">〒754-0041 山口県山口市小郡令和１丁目１−１</dd>
+                    <dt class="access-dt">TEL</dt>
+                    <dd class="access-dd">000-0000-0000</dd>
+                    <dt class="access-dt">FAX</dt>
+                    <dd class="access-dd">000-0000-0000</dd>    
+                    <dt class="access-dt">MAIL</dt>
+                    <dd class="access-dd">dummy@cheeseacademy.yamaguchi</dd>     
+                </dl>
+            </div>
+    </div>
+
+    <!-- contact -->
+    <dvi class="contact" id="Contact">
+        <dvi class="form_wrapper">
+            <div class="contact__space">
+                <dvi class="contact__text">
+                    Contact
+                </dvi>
+                <dvi>
+                    説明会お申し込み・お問い合わせ
+                </dvi>
+                <dvi class="guide_space"></dvi>
+                <div>ぜひ1度，足を運んでみませんか．説明会は随時開催中．</div>
+                <div>その他，お問い合わせもお気軽にどうぞ．お待ちしております．</div>
+                <dvi class="guide_space2"></dvi>
+                <div>※███アカデミーは実際には存在しません．</div>
+                <div>間違っても問い合わせしないようお願いいたします．</div>
+                <dvi class="guide_space"></dvi>
+            </div>
+            <form action="#" method="post">
+                <div class="contact-table">
+                    <dl class="contact-margin">
+                        <dt class="contact-dt">名前</dt>
+                        <dd class="contact-dd"><input class="contact-type" type="text" name="name"></dd>
+                        <dt class="contact-dt">カナ</dt>
+                        <dd class="contact-dd"><input class="contact-type" type="text" name="kaba"></dd>
+                        <dt class="contact-dt">メールアドレス</dt>
+                        <dd class="contact-dd"><input class="contact-type" type="email" name="email" id=""></dd>
+                        <dt class="contact-dt">志望動機</dt>
+                        <dd class="contact-dd">
+                            <dvi class="a__row">
+                                <label class="a__left" for="a1"><input type="radio" name="kind" id="a1" value="起業をしたい">起業をしたい </label>
+                                <label class="a__left" for="a2"><input type="radio" name="kind" id="a2" value="███系企業に就職・転職したい">███系企業に就職・転職したい </label>
+                                <label class="a__left" for="a3"><input type="radio" name="kind" id="a3" value="███と関わる仕事をしており，仕事に生かしたい">███と関わる仕事をしており，仕事に生かしたい </label>
+                                <label class="a__left" for="a4"><input type="radio" name="kind" id="a4" value="███の教養を身につけたい">███の教養を身につけたい </label>    
+                            </dvi>    
+                        </dd>    
+                        <dt class="contact-dt">詳細</dt>
+                        <dd class="contact-dd">
+                            <textarea class="contact-type" name="detail" id="" cols="30" rows=""></textarea>
+                        </dd>     
+                    </dl>
+                </div>
+            </form>
+            <dvi class="mire__main">
+                <dvi class="more__space1"></dvi>
+                <button id="open-btn" class="overlay-event button005" type="button">送信</button>
+                <div id="overlay" class="overlay-event">
+                  <div class="flex">
+                    <div id="overlay-inner">
+                      <p>特に送り先はないよ</p>
+                      <img class="news1_img" src="img/手をふる.gif" alt="ヒノトリ">
+                      <button id="close-btn" class="overlay-event" type=button>Close</button>
+                    </div>
+                  </div>
+                </div>                    
+                <dvi class="more__space2"></dvi>
+            </dvi>
+        </dvi>
+    </dvi>
+    <!-- 動画埋め込み -->
+    <dvi class="SNS__all">
+    
+        <div class="movie1__all">
+            <div class=></div>
+            <iframe class="movie1" width="560" height="315" src="https://www.youtube.com/embed/t4kDo32X4_s?&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div></div>
+        </div> 
+    </dvi>
+
+    <!-- menu -->
+        <div class="menu">
+            <dvi class="menu_img">
+                <img class="example1" src="img/header_logo.png" alt="logo">
+            </dvi>
+            <li><a class="menu_sab" href="#About">About</a></li>
+            <li><a class="menu_sab" href="#Course">Course</a></li>
+            <li><a class="menu_sab" href="#news">NEWS</a></li>
+            <li><a class="menu_sab" href="#Access">Access</a></li>
+            <li><a class="menu_sab" href="#Contact">Contact</a></li>
+            <a href="#" class="menu_Twitter"><span class="fa-brands fa-square-twitter"></span></a>
+        </div>
+    
+    <!-- hino1 -->
+    <div>
+        <a href="#" class="btn-pagetop"><img class="hino1" src="img/羽ばたき.gif" alt="habataki"></a>
+    </div>
+    <!-- ★footer -->
+    <footer class="footer text_center">
+        <div class="wrapper">
+            <!-- a href="#" class="btn-pagetop"><span class="fa fa-angle-up icon-up"></span></a-->
+            <small class="copyrights">copyrights 2016-2018 ███ Academy Fukuoka All RIghts Reserved.</small>
+        </div>
+    </footer>
+</body>
+</html>
