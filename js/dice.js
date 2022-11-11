@@ -1,12 +1,12 @@
 // JavaScript Document
 
 getdice6 = new Array(
-    "00_Cheese_Academy/img/6d1.gif", 
+    "img/6d1.gif", 
     "img/6d2.gif",
-    "../img/6d3.gif",
-    "../img/6d4.gif",
-    "../img/6d5.gif",
-    "../img/6d6.gif");
+    "img/6d3.gif",
+    "img/6d4.gif",
+    "img/6d5.gif",
+    "img/6d6.gif");
 
 count = 20;	//　点滅させる回数
 mSec = 50;	//　点滅速度（1秒＝1000）
